@@ -14,16 +14,18 @@ const dbUrl='mongodb://mongo:27017/makes'
 mongoose.connect(dbUrl, {useNewUrlParser: true,useUnifiedTopology: true})
 .then(()=>{
     // Read Data from local file and insert into MongoDB Database
-    fs.readFile("docs/make.txt","utf-8",(err,data)=>{
+    fs.readFile("src/docs/make.txt","utf-8",(err,data)=>{
         if(!err){
             data=JSON.parse(data)
             console.log(typeof(data))
             Make.insertMany(data).then(()=>{
                 console.log("Data inserted in mongodb database successfully.")
-                console.log("Please visit http://localhost:8081")
+                console.log("Please visit http://localhost:8082")
             }).catch((err)=>{
                 console.log(err)
             })
+        }else{
+            console.log("Error",err)
         }
     })
 })

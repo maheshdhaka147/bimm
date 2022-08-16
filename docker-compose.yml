@@ -1,11 +1,11 @@
 version: '3'
 services:
   app:
-    container_name: nodeapp1
+    container_name: nodeapp3
     restart: always
     build: .
     ports:
-      - '8081:8081'
+      - '8082:8082'
     external_links:
       - mongo
   mongo:

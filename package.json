@@ -2,10 +2,10 @@
   "name": "exercise2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node models/insert.js & node index.js"
+    "start": "node src/application/insert.js & node src/app.js"
   },
   "keywords": [],
   "author": "",
