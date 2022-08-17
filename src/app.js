@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const vehciles = require("./controller/vehicle.controller");
+require('dotenv').config();
 const port = process.env.PORT || 8082;
 
 app.use('/', vehciles)
