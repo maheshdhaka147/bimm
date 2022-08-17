@@ -9,6 +9,7 @@ Note: Code for fetching data using API is in src/application/process.js .
 
 Graphql Query Input: 
 ```json
+
 {
  make(makeId:440){
   makeId,
@@ -19,6 +20,7 @@ Graphql Query Input:
   }
 } 
 }
+
 ```
 
 Thank you
