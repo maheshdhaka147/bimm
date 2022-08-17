@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const mongoose = require("mongoose");
 const { graphqlHTTP } = require('express-graphql');
 const config = require("../infrastructure/config");
 const Make = require("../infrastructure/models/makeModel");
@@ -17,7 +16,8 @@ router.get("/",async(req,res)=>{
 // The root provides a resolver function for each API endpoint
 var root = {
   make: async ({makeId,makeName}) => {
-    let makes = await Make.findOne({makeId:makeId,makeName: makeName}).select({makeId:1,makeName:1,vehicleTypes:1})
+    let makes = await Make.findOne({makeId:makeId,makeName: makeName}).select({makeId:1,makeName:1,vehicleTypes:1});
+    if(!makes) throw new Error("Not Found")
     return {
       "makeId": makes.makeId,
       "makeName": makes.makeName,

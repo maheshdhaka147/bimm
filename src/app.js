@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const vehciles = require("./controller/vehiclecontroller");
+const vehciles = require("./controller/vehicle.controller");
 const port = process.env.PORT || 8082;
 
 app.use('/', vehciles)
