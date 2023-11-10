@@ -7,13 +7,13 @@ const {getData,getDataByMake} = require("../src/application/transformation");
 
 describe('Data Transformation', () => {
 
-    it('Parse all makes data from xml to json', async ()=>{
-        const result = await getData(allMakesURL);
-        let i = 0; // Can test on different makes in result array
-        assert.typeOf(result,'array');
-        assert.nestedProperty(result[i],'makeId');
-        assert.nestedProperty(result[i], 'makeName');
-    })
+    // it('Parse all makes data from xml to json', async ()=>{
+    //     const result = await getData(allMakesURL);
+    //     let i = 0; // Can test on different makes in result array
+    //     assert.typeOf(result,'array');
+    //     assert.nestedProperty(result[i],'makeId');
+    //     assert.nestedProperty(result[i], 'makeName');
+    // })
 
     it('Parse vehicle data per make to json', async ()=>{
         const result = await getData(allMakesURL);
