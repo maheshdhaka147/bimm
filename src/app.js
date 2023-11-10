@@ -8,6 +8,6 @@ app.use('/', vehciles)
 app.listen(port);
 
 console.log(`Rest is running at localhost:${port}`)
-console.log(`Running a GraphQL API server at localhost:${port}/graphql`);
+console.log(`Test Running a GraphQL API server at localhost:${port}/graphql`);
 
 
